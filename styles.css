@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+#app {
+  margin: 0;
+}
+
+.reset {
+  width: 15%;
+}
+
+.board {
+  width: 100vw;
+  height: 65vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+}
+
+.winner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 5rem;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10px;
+  font-size: 2rem;
+}
+
+.tableXScore, .tableOScore {
+  text-align: center;
+}
+
+.square:first-child,
+.square:nth-child(2),
+.square:nth-child(4),
+.square:nth-child(5),
+.square:nth-child(7),
+.square:nth-child(8) {
+  border-right: none;
+}
+
+.square:first-child,
+.square:nth-child(2),
+.square:nth-child(3),
+.square:nth-child(4),
+.square:nth-child(5),
+.square:nth-child(6) {
+  border-bottom: none;
+}
